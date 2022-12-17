@@ -21,7 +21,6 @@ button = Button(2)
 led = LED(17)
 led.on()
 button.when_pressed = click_image
+led.off()
 pause()
-
-
 
