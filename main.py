@@ -14,10 +14,13 @@ def click_image():
 # camera click button GPIO pin 22
 button = Button(22)
 
-while True:
-    if button.is_pressed:
-        print("Button is pressed")
-        click_image()
-        print("image upload complete")
+button.wait_for_press()
+print('button pressed')
+
+# while True:
+#     if button.is_pressed:
+#         print("Button is pressed")
+#         # click_image()
+#         print("image upload complete")
 
 
