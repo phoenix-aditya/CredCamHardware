@@ -13,8 +13,9 @@ def upload_data_to_mongoDB(
     ):
     collection = database.images
     with open(image_path, "rb") as f:
-        encoded = Binary(f.read())
-
+        encoded = base64.b64encode(f.read())
+        encoded = encoded.decode('utf-8')
+    
     collection.insert_one(
         {
             "username":"aditya" , 
