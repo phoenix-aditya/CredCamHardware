@@ -18,15 +18,20 @@ def click_image():
     led.off()
     print('image capture begins')
     img_path = capture_image()
+    print('image captured')
+    print('uploading image to IPFS')
+    print('uploaded image to IPFS')
+    print('uploading metadata to MongoDB')
     upload_data_to_mongoDB(
         image_path=img_path
         )
     if os.path.exists("test.jpg"):
         os.remove("test.jpg")
-    print('image capture ends')
+    print('uploaded metadata to MongoDB')
     led.on()
 
 def intruder_detected():
+    print('intruder detected')
     intruder_light.on()
 
 # camera click button GPIO pin 22
