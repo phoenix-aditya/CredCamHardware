@@ -1,4 +1,5 @@
 cd /
 cd home/pi/CredCamHardware
-sudo python3 main.py
+sleep 20
+python main.py
 cd /

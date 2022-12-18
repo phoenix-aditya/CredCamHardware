@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from image_capture import capture_image
 from image_upload import upload_data_to_mongoDB, upload_image_to_ipfs
 from gpiozero import Button, LED
