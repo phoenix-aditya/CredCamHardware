@@ -6,6 +6,7 @@ from gpiozero import Button, LED
 import os
 from signal import pause
 
+
 def click_image():
     led.off()
     print('image capture begins')
@@ -23,10 +24,11 @@ def click_image():
     led.on()
 
 # camera click button GPIO pin 22
+os.system("/home/pi/CredCamHardware/intruder.py &")
+
 button = Button(2)
 led = LED(17)
 
 led.on()
 button.when_pressed = click_image
 pause()
-
